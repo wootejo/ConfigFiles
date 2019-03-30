@@ -42,9 +42,16 @@ set hlsearch
 nnoremap <leader>c :nohlsearch<CR>
 inoremap jk <esc>
 inoremap JK F!!!!CAPS!!!!f<esc>FF
+inoremap <C-o> <Esc>o
+inoremap <C-O> <Esc>O
 set ruler
 nnoremap zm zbM
 colorscheme elflord
 set laststatus=2
 set statusline=
 set statusline+=%<%f\ %h%m%r%=%10(%l,%c%V%)\ %5p%%
+command Clean :%s/jpw/test/g | %s/trx.../example/g | wq
+command Paste :b2 | i | <C-r>a
+command Comment 1G
+
+
